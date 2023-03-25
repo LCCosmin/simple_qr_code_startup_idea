@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>FRESHLY!</title>
+  </head>
+
+  <h2>Item Submission</h2>
+  <form method="post", id="task-form">
+    {% csrf_token %}
+    <label for="item_name">Item Name: </label>
+    <input type="text" name="item_name" id="item_name" required><br>
+    <label for="item_description">Item Description: </label>
+    <input type="text" name="item_description" id="item_description" required><br>
+    <label for="portion_kcal">Kcals / 100g: </label>
+    <input type="text" name="portion_kcal" id="portion_kcal" required><br>
+    <label for="how">How it was produced: </label>
+    <input type="text" name="how" id="how" required><br>
+    <label for="producer_name">Producer Name: </label>
+    <input type="text" name="producer_name" id="producer_name" required><br>
+    <button type="submit">Submit </button>
+  </form>
+
+  <script type="text/javascript">
+    $(document).on('submit','#task-form',function(e){
+        e.preventDefault();
+        
+        });
+    </script>
+</html>
